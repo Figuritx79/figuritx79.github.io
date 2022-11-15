@@ -235,10 +235,19 @@ body {
 .button-red:hover {
   background: #0d6efd;
 }
-
+.foto{
+  position: absolute;
+}
+.foto__yo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: 10rem;
+  margin-top: 15rem;
+}
 .footer {
   background: #212529;
-  /* position: relative; */
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
