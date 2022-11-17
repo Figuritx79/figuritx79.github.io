@@ -33,7 +33,7 @@
     <?php
     if (isset($_POST['register'])) {
         if (strlen($_POST['clave']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1) {
-            include('../connection/conn.php');
+            include('../connection/conexionDB.php');
             $clave = trim($_POST['clave']);
             $nombre = trim($_POST['nombre']);
             $apellido = trim($_POST['apellido']);
