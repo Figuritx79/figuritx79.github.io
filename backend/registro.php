@@ -49,7 +49,7 @@
             $pas = substr($pas, 0, strlen($pas) - 1);
             $query = "INSERT INTO `registros`(`clave`, `nombres`, `apellidos`, `edad`, `especialidad`, `genero`, `hobby`) VALUES ('$clave','$nombre','$apellido','$edad','$carrera','$genero','$pas')";
 
-            if (mysqli_query($conexion, $query)) {
+            if (mysqli_query($db, $query) ) {
     ?>
                 <h1 class="teto__exito">
                     Registro exitoso
