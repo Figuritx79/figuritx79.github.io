@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Código</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #1a202c;
+      color: #fff;
+    }
+
+    .container {
+      background-color: #2d3748;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .form-control {
+      background-color: #4a5568;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: #4299e1;
+      border-color: #4299e1;
+    }
+
+    .btn-primary:hover {
+      background-color: #3182ce;
+      border-color: #3182ce;
+    }
+
+    .output {
+      background-color: #2d3748;
+      border: 1px solid #4a5568;
+      border-radius: 5px;
+      padding: 10px;
+      color: #fff;
+    }
+
+    .text-danger {
+      color: #f56565;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-center">Editor de Código</h1>
+    <textarea class="form-control mt-4" rows="6" id="code"></textarea>
+    <button class="btn btn-primary mt-3" onclick="runCode()">Ejecutar</button>
+    <div class="output mt-4" id="output"></div>
+  </div>
+
+  <script>
+    function runCode() {
+      var code = document.getElementById("code").value;
+      var output = document.getElementById("output");
+
+      try {
+        output.innerHTML = "";
+        eval(code);
+      } catch (error) {
+        output.innerHTML = "<pre class='text-danger'>" + error + "</pre>";
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
